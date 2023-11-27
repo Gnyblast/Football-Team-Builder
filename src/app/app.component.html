@@ -1,0 +1,102 @@
+<div class="container">
+  @if(isFirst){
+  <div class="pre-generate-player-forms">
+    <form (submit)="generateFormFields()">
+      <mat-form-field appearance="outline">
+        <mat-label>Enter # of Players</mat-label>
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="numOfPlayers"
+          name="something"
+        />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="accent"
+        type="submit"
+        [disabled]="numOfPlayers < 1"
+      >
+        Create
+      </button>
+      <button mat-raised-button color="warn" type="button" (click)="test()">
+        Demo
+      </button>
+    </form>
+  </div>
+  } @else {
+  <div class="add-new-form-container">
+    <span>{{ numOfPlayers }} Players</span>
+    <button mat-mini-fab color="accent" (click)="addNewPlayer()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <ng-container [formGroup]="playerForms">
+    <ng-container formArrayName="players">
+      @for (form of getAsFormArray(playerForms.controls['players']).controls;
+      track getAsFormArray(playerForms.controls['players']).controls) {
+      <form
+        [formGroup]="
+          getAsFormGroup(
+            getAsFormArray(playerForms.controls['players']).controls[$index]
+          )
+        "
+      >
+        <mat-form-field>
+          <mat-label>Player Name {{ $index + 1 }}</mat-label>
+          <input formControlName="name" matInput type="text" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Position</mat-label>
+          <mat-select formControlName="position">
+            @for (position of positions; track positions) {
+            <mat-option [value]="position">{{ position }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Attack Rating</mat-label>
+          <mat-select formControlName="attackRating">
+            @for (rating of ratings; track ratings) {
+            <mat-option [value]="rating">{{ rating }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Defence Rating</mat-label>
+          <mat-select formControlName="defenceRating">
+            @for (rating of ratings; track ratings) {
+            <mat-option [value]="rating">{{ rating }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Condition Rating</mat-label>
+          <mat-select formControlName="conditionRating">
+            @for (rating of ratings; track ratings) {
+            <mat-option [value]="rating">{{ rating }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <button mat-mini-fab color="accent" (click)="deletePlayer($index)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </form>
+      }
+    </ng-container>
+    <div class="button-container">
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="generateTeams()"
+        [disabled]="numOfPlayers < 1"
+      >
+        Submit
+      </button>
+      <button mat-raised-button (click)="clean()" [disabled]="numOfPlayers < 1">
+        Clean
+      </button>
+    </div>
+  </ng-container>
+  }
+</div>

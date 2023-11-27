@@ -1,0 +1,102 @@
+{
+  "players": [
+    {
+      "name": "Güney",
+      "position": "Midfielder",
+      "attackRating": 10,
+      "defenceRating": 5,
+      "conditionRating": 8
+    },
+    {
+      "name": "Murat",
+      "position": "Midfielder",
+      "attackRating": 8,
+      "defenceRating": 7,
+      "conditionRating": 8
+    },
+    {
+      "name": "Hüseyin Özaşık",
+      "position": "Midfielder",
+      "attackRating": 5,
+      "defenceRating": 3,
+      "conditionRating": 5
+    },
+    {
+      "name": "Berk",
+      "position": "Striker",
+      "attackRating": 7,
+      "defenceRating": 3,
+      "conditionRating": 4
+    },
+    {
+      "name": "Osman Kısa",
+      "position": "Striker",
+      "attackRating": 7,
+      "defenceRating": 7,
+      "conditionRating": 8
+    },
+    {
+      "name": "Okan",
+      "position": "Defender",
+      "attackRating": 6,
+      "defenceRating": 9,
+      "conditionRating": 10
+    },
+    {
+      "name": "Oğuz Solyalı",
+      "position": "Defender",
+      "attackRating": 3,
+      "defenceRating": 8,
+      "conditionRating": 7
+    },
+    {
+      "name": "Oğuz Özaşık",
+      "position": "Defender",
+      "attackRating": 2,
+      "defenceRating": 7,
+      "conditionRating": 7
+    },
+    {
+      "name": "Ödül",
+      "position": "Defender",
+      "attackRating": 2,
+      "defenceRating": 5,
+      "conditionRating": 4
+    },
+    {
+      "name": "Hasanagi",
+      "position": "Defender",
+      "attackRating": 4,
+      "defenceRating": 7,
+      "conditionRating": 7
+    },
+    {
+      "name": "Turhan",
+      "position": "Striker",
+      "attackRating": 3,
+      "defenceRating": 5,
+      "conditionRating": 4
+    },
+    {
+      "name": "Necat",
+      "position": "Midfielder",
+      "attackRating": 6,
+      "defenceRating": 6,
+      "conditionRating": 6
+    },
+    {
+      "name": "Tolgahan",
+      "position": "GK",
+      "attackRating": 1,
+      "defenceRating": 1,
+      "conditionRating": 1
+    },
+    {
+      "name": "Galeci",
+      "position": "GK",
+      "attackRating": 1,
+      "defenceRating": 1,
+      "conditionRating": 1
+    }
+  ]
+}
